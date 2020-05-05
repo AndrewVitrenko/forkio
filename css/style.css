@@ -488,6 +488,8 @@ main {
   -ms-flex-align: center;
   align-items: center;
   padding: 2.5% 7%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   /* Firefox 19+ */
   /* Firefox 18-*/ }
   .subscription p {
@@ -499,10 +501,12 @@ main {
     margin-left: auto;
     margin-right: 2%;
     padding: 10px 15px;
+    padding-left: 20px;
     font-family: 'Montserrat', sans-serif;
     border: none;
     border-radius: 30px;
-    color: #d3d5d9; }
+    color: #d3d5d9;
+    outline: none; }
   .subscription ::-webkit-input-placeholder {
     color: #d3d5d9; }
   .subscription ::-moz-placeholder {
@@ -613,7 +617,9 @@ footer {
   flex-direction: row;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
   footer div {
     -ms-flex-preferred-size: 22%;
     flex-basis: 22%;

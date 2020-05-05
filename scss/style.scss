@@ -585,6 +585,7 @@ main {
     flex-direction: row;
     align-items: center;
     padding: 2.5% 7%;
+    flex-wrap: wrap;
 
     p {
         margin: 0;
@@ -597,10 +598,12 @@ main {
         margin-left: auto;
         margin-right: 2%;
         padding: 10px 15px;
+        padding-left: 20px;
         font-family: 'Montserrat', sans-serif;
         border: none;
         border-radius: 30px;
         color: #d3d5d9;
+        outline: none;
     }
 
     ::-webkit-input-placeholder {
@@ -738,6 +741,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     div {
         flex-basis: 22%;
