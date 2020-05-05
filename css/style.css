@@ -538,7 +538,9 @@ main {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 3% 5%;
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
   .links .article {
     -ms-flex-preferred-size: 28%;
     flex-basis: 28%;

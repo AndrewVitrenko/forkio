@@ -643,6 +643,7 @@ main {
     justify-content: space-between;
     padding: 3% 5%;
     padding-bottom: 0;
+    flex-wrap: wrap;
 
     .article {
         flex-basis: 28%;
