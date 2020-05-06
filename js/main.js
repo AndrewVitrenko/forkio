@@ -4,19 +4,20 @@ $(document).ready(function() {
     $('.slick-arrow').text('')
 })
 
-const htmlScrollHeight = screen.height
+let lastScrollPosition = 0;
 
 $(window).scroll(function() {
-    //let scrollHeight = $('header').outerHeight(true) + $('.using_range').outerHeight(true) + $('.example h3').outerHeight(true) + $('.example').outerHeight(true) * 0.22;
 
-    const topHeight = $('.code').offset().top / 2
+    const wt = $(window).scrollTop();
+    const wh = $(window).height();
+    const et = $('.code').offset().top;
+    const eh = $('.code').outerHeight();
 
-    if ($(window).scrollTop() >= topHeight && $(window).scrollTop() <= topHeight + $('.code').height()*2) {
-        // console.log($('.code').offset().top / 2)
-        // console.log($(window).scrollTop())
+    if (wt + wh >= et && wt >= lastScrollPosition) {
         $('.code').css({left: '7%'})
+        lastScrollPosition = wt;
     }
-    else {
+    else if (wt <= et + eh && wt <= lastScrollPosition) {
         $('.code').css({left: '15%'})
     }
 })
