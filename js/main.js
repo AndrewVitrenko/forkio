@@ -4,7 +4,7 @@ $(document).ready(function() {
     $('.slick-arrow').text('')
 })
 
-let lastScrollPosition = 0;
+let left = $('.code').css('left')
 
 $(window).scroll(function() {
 
@@ -13,11 +13,16 @@ $(window).scroll(function() {
     const et = $('.code').offset().top;
     const eh = $('.code').outerHeight();
 
-    if (wt + wh >= et && wt >= lastScrollPosition) {
-        $('.code').css({left: '7%'})
-        lastScrollPosition = wt;
+
+    if (wt + wh >= et) {
+        if (left == '15%') {
+            $('.code').css({left: '7%'})
+        }
+        else if (left == '7%') {
+            $('.code').css({left: '0'})
+        }
     }
-    else if (wt <= et + eh && wt <= lastScrollPosition) {
-        $('.code').css({left: '15%'})
+    else if (wt + wh <= et + eh) {
+        $('.code').css({left: left})
     }
 })
