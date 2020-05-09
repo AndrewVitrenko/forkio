@@ -164,9 +164,13 @@ main {
     margin-bottom: 6%;
     
     table {
-        display: inline;
+        display: inline-block;
         border-collapse: collapse;
         margin-right: 1%;
+        
+        tr {
+            border-radius: 5px;
+        }
         
         td {
             border: 1px solid #d5d5d5;
@@ -272,21 +276,6 @@ main {
     padding: 0 15%;
     box-sizing: border-box;
     
-    
-    
-    a {
-        border: none;
-        padding: 4% 10%;
-        padding-right: 25%;
-        font-family: 'Montserrat', sans-serif;
-        box-sizing: border-box;
-        font-size: 125%;
-        border-radius: 5px;
-        display: inline-block;
-        text-decoration: none;
-        width: 90%
-    }
-    
     i {
         margin-right: 15%;
     }
@@ -310,6 +299,20 @@ main {
         font-weight: 600;
         margin-bottom: 0;
         margin-top: 10%;
+    }
+
+    a {
+        border: none;
+        padding: 4% 10%;
+        padding-right: 25%;
+        font-family: 'Montserrat', sans-serif;
+        box-sizing: border-box;
+        font-size: 125%;
+        border-radius: 5px;
+        display: inline-block;
+        text-decoration: none;
+        min-width: 228px;
+        width: 90%;
     }
 }
 
@@ -385,6 +388,7 @@ hr {
             font-size: 100%;
             color: $deafult_violet;
             font-family: 'Montserrat', sans-serif;
+            text-decoration: none;
         }
     }
 
@@ -397,6 +401,7 @@ hr {
         .nick_link {
             margin-right: 0.5%;
             color: $deafult_violet;
+            text-decoration: none;
         }
     }
 
@@ -616,6 +621,7 @@ hr {
         border-radius: 30px;
         color: #d3d5d9;
         outline: none;
+        min-width: 200px;
     }
 
     ::-webkit-input-placeholder {
@@ -645,7 +651,7 @@ hr {
     border: none;
     outline: none;
     border-radius: 30px;
-    font: 600 10px 'Source Sans Pro';
+    font: 600 14px 'Source Sans Pro';
     padding: 12px 25px;
     letter-spacing: 0.75px;
 }
@@ -944,7 +950,7 @@ footer {
     }
 
     .nav_bar img {
-        height: 80%;
+        height: 50%;
         width: auto;
     }
 }
@@ -997,6 +1003,21 @@ footer {
 
     .poster {
         padding-top: 2%;
+
+        h1 {
+            font-size: 64px;
+        }
+    }
+
+    .slogan {
+        font-size: 20px;
+    }
+
+    .using_range {
+
+        h2 {
+            font-size: 250%;
+        }
     }
 }
 
@@ -1058,11 +1079,6 @@ footer {
     .using_range {
         padding-left: 2%;
         padding-right: 2%;
-    }
-
-    .nav_bar {
-        padding-left: 5%;
-        padding-right: 5%;
     }
 
     .nav ul {
@@ -1129,7 +1145,6 @@ footer {
         width: 30px;
         height: 25px;
         position: relative;
-        padding-left: 15px;
     }
 
     .burger::before, .burger::after {
@@ -1161,5 +1176,88 @@ footer {
     .buy_now {
         margin-left: auto;
         margin-right: 5%;
+    }
+
+    .watchword {
+        font-size: 20px;
+        margin-bottom: 5%;
+    }
+
+    .social_networks {
+        display: block;
+
+        a {
+            width: 228px;
+            padding: 12px 0;
+            padding-right: 5%;
+        }
+
+        p {
+            margin-top: 2%;
+        }
+
+        div {
+            margin-bottom: 5%;
+        }
+    }
+
+    footer {
+        display: block;
+        padding-left: 4%;
+
+        div {
+            max-width: 300px;
+            margin-bottom: 7%;
+        }
+    }
+
+    .caption {
+        font-size: 20px;
+    }
+
+    .bottom_logo {
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .bottom_navbar {
+        ul {
+            a {
+                font-size: 16px;
+            }
+        }    
+    }
+
+    .contact_information {
+        span {
+            font-size: 90%;
+        }
+
+        address {
+            font-size: 16px;
+        }
+    }
+
+    .city {
+        font-size: 20px;
+    }
+
+    .info {
+        .caption {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 100%;
+        }
+    }
+
+    .github_rating {
+        table {
+            display: block;
+            width: 201px;
+            margin: 3% auto;
+        }
     }
 }

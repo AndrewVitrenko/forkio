@@ -141,9 +141,11 @@ main {
 .github_rating {
   margin-bottom: 6%; }
   .github_rating table {
-    display: inline;
+    display: inline-block;
     border-collapse: collapse;
     margin-right: 1%; }
+    .github_rating table tr {
+      border-radius: 5px; }
     .github_rating table td {
       border: 1px solid #d5d5d5;
       padding: 6px 3px;
@@ -227,18 +229,6 @@ main {
   padding: 0 15%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
-  .connection a {
-    border: none;
-    padding: 4% 10%;
-    padding-right: 25%;
-    font-family: 'Montserrat', sans-serif;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-size: 125%;
-    border-radius: 5px;
-    display: inline-block;
-    text-decoration: none;
-    width: 90%; }
   .connection i {
     margin-right: 15%; }
   .connection span {
@@ -259,6 +249,19 @@ main {
     font-weight: 600;
     margin-bottom: 0;
     margin-top: 10%; }
+  .social_networks a {
+    border: none;
+    padding: 4% 10%;
+    padding-right: 25%;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 125%;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+    min-width: 228px;
+    width: 90%; }
 
 hr {
   margin: 7%;
@@ -313,7 +316,8 @@ hr {
       font-weight: 600;
       font-size: 100%;
       color: #8d81ac;
-      font-family: 'Montserrat', sans-serif; }
+      font-family: 'Montserrat', sans-serif;
+      text-decoration: none; }
   .dossier .characteristic {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 125%;
@@ -321,7 +325,8 @@ hr {
     color: #333333; }
     .dossier .characteristic .nick_link {
       margin-right: 0.5%;
-      color: #8d81ac; }
+      color: #8d81ac;
+      text-decoration: none; }
 
 .last_update {
   font-weight: 600;
@@ -537,7 +542,8 @@ hr {
     border: none;
     border-radius: 30px;
     color: #d3d5d9;
-    outline: none; }
+    outline: none;
+    min-width: 200px; }
   .subscription ::-webkit-input-placeholder {
     color: #d3d5d9; }
   .subscription ::-moz-placeholder {
@@ -554,7 +560,7 @@ hr {
   border: none;
   outline: none;
   border-radius: 30px;
-  font: 600 10px 'Source Sans Pro';
+  font: 600 14px 'Source Sans Pro';
   padding: 12px 25px;
   letter-spacing: 0.75px; }
 
@@ -783,7 +789,7 @@ footer {
   .code {
     width: 125%; }
   .nav_bar img {
-    height: 80%;
+    height: 50%;
     width: auto; } }
 
 @media screen and (max-width: 1030px) {
@@ -811,7 +817,13 @@ footer {
     margin-left: 5%;
     margin-right: 5%; }
   .poster {
-    padding-top: 2%; } }
+    padding-top: 2%; }
+    .poster h1 {
+      font-size: 64px; }
+  .slogan {
+    font-size: 20px; }
+  .using_range h2 {
+    font-size: 250%; } }
 
 @media screen and (max-width: 925px) {
   .bottom_navbar {
@@ -853,9 +865,6 @@ footer {
   .using_range {
     padding-left: 2%;
     padding-right: 2%; }
-  .nav_bar {
-    padding-left: 5%;
-    padding-right: 5%; }
   .nav ul {
     padding-left: 0; }
   .nav {
@@ -898,8 +907,7 @@ footer {
     display: block;
     width: 30px;
     height: 25px;
-    position: relative;
-    padding-left: 15px; }
+    position: relative; }
   .burger::before, .burger::after {
     content: '';
     background-color: #323232;
@@ -920,4 +928,43 @@ footer {
     top: 11.5px; }
   .buy_now {
     margin-left: auto;
-    margin-right: 5%; } }
+    margin-right: 5%; }
+  .watchword {
+    font-size: 20px;
+    margin-bottom: 5%; }
+  .social_networks {
+    display: block; }
+    .social_networks a {
+      width: 228px;
+      padding: 12px 0;
+      padding-right: 5%; }
+    .social_networks p {
+      margin-top: 2%; }
+    .social_networks div {
+      margin-bottom: 5%; }
+  footer {
+    display: block;
+    padding-left: 4%; }
+    footer div {
+      max-width: 300px;
+      margin-bottom: 7%; }
+  .caption {
+    font-size: 20px; }
+  .bottom_logo p {
+    font-size: 16px; }
+  .bottom_navbar ul a {
+    font-size: 16px; }
+  .contact_information span {
+    font-size: 90%; }
+  .contact_information address {
+    font-size: 16px; }
+  .city {
+    font-size: 20px; }
+  .info .caption {
+    font-size: 20px; }
+  .info p {
+    font-size: 100%; }
+  .github_rating table {
+    display: block;
+    width: 201px;
+    margin: 3% auto; } }
