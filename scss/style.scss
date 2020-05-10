@@ -73,13 +73,9 @@ html, body {
 
 .poster {
     box-sizing: border-box;
-    background: url(../img/laptop.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 5%;
     text-align: center;
-    height: 100vw/1400px*800px;
     position: relative;
+    background-color: #010005;
 
     h1 {
         color: #fff;
@@ -88,8 +84,14 @@ html, body {
         font-family: 'Montserrat', sans-serif;
         font-weight: 800;
     }
+}
 
-    
+.laptop {
+    width: 100%;
+}
+
+.text {
+    padding-top: 7%;
 }
 
 .version {
@@ -1002,7 +1004,6 @@ footer {
     }
 
     .poster {
-        padding-top: 2%;
 
         h1 {
             font-size: 64px;
@@ -1259,5 +1260,10 @@ footer {
             width: 201px;
             margin: 3% auto;
         }
+    }
+
+    .subscription {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
