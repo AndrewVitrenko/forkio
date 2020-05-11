@@ -15,6 +15,7 @@ html, body {
 .nav_bar {
     box-sizing: border-box;
     padding: 2% 7%;
+    padding-left: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -28,6 +29,7 @@ html, body {
     img {
         width: 10%;
         height: auto;
+        margin-left: 7%;
     }
 
     
@@ -53,15 +55,15 @@ html, body {
     
 }
 
+.border, .nav_networks, .burger {
+    display: none;
+}
+
 .buy_now {
     color: #fff !important;
     padding: 9px 30px;
     background-color: $deafult_violet;
     border-radius: 20px;
-}
-
-.burger {
-    display: none;
 }
 
 .nav {
@@ -169,13 +171,10 @@ main {
         display: inline-block;
         border-collapse: collapse;
         margin-right: 1%;
-        
-        tr {
-            border-radius: 5px;
-        }
+        border-radius: 5px;
+        border: 1px solid #d5d5d5;
         
         td {
-            border: 1px solid #d5d5d5;
             padding: 6px 3px;
             text-align: center;
             min-width: 100px;
@@ -183,7 +182,7 @@ main {
         
         td:nth-child(odd) {
             background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgba(251,251,251,1) 7.69%, rgba(250,250,250,1) 15.38%, rgba(249,249,249,1) 23.08%, rgba(248,248,248,1) 30.77%, rgba(247,247,247,1) 38.46%, rgba(246,246,246,1) 46.15%, rgba(245,245,245,1) 53.85%, rgba(244,244,244,1) 61.54%, rgba(243,243,243,1) 69.23%, rgba(242,242,242,1) 76.92%, rgba(241,241,241,1) 84.62%, rgba(240,240,239,1) 92.31%, rgba(238,238,239,1) 100%);
-            
+            border-right: 1px solid #d5d5d5;
         }
         
         p {
@@ -621,9 +620,9 @@ hr {
         font-family: 'Montserrat', sans-serif;
         border: none;
         border-radius: 30px;
-        color: #d3d5d9;
         outline: none;
         min-width: 200px;
+        color: $deafult_gray;
     }
 
     ::-webkit-input-placeholder {
@@ -1138,7 +1137,85 @@ footer {
     }
 
     .nav {
-        display: none;
+        display: block;
+        position: fixed;
+        z-index: 3;
+        width: 100%;
+        max-width: 300px;
+        right: 0;
+        background-color: rgba(51, 51, 51, 0.98);
+        padding-bottom: 20px;
+        top: -100%;
+        transition: all 0.5s;
+        
+        ul {
+            display: block;
+            margin: 0;
+        }
+        
+        li {
+            padding: 20px;
+            vertical-align: middle;
+            border-bottom: 1px solid #3E3D3F;
+            margin-left: 0;
+            margin-right: 0;
+            position: relative;
+        }
+
+        a {
+            color: #fff;
+            font-weight: 600;
+            transition: all 0.5s;
+        }
+
+        li:hover {
+            :before {
+                content: '';
+                position: absolute;
+                width: 3px;
+                border-radius: 10px;
+                top: 20px;
+                bottom: 20px;
+                background-color: $deafult_violet;
+                transition: all 0.5s;
+                left: 0;
+            }
+
+            a {
+                color: $deafult_violet;
+            }
+        }
+    }
+
+    .nav.visible {
+        top: 80px;
+    }
+
+    .nav_networks {
+        display: block;
+        width: 100%;
+        padding-left: 20px;
+        padding-top: 20px;
+
+        span {
+            display: block;
+            text-transform: capitalize;
+            color: #9a9a9a;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        i {
+            color: white;
+            font-size: 20px;
+            margin-right: 20px;
+            transition: all 0.5s;
+        }
+
+        i:hover {
+            color: $deafult_violet;
+        }
     }
 
     .burger {
@@ -1146,6 +1223,16 @@ footer {
         width: 30px;
         height: 25px;
         position: relative;
+        transition: all 0.5s;
+        margin-left: 25px;
+    }
+
+    .border {
+        display: block;
+        width: 1px;
+        height: 35px;
+        background-color: #f4f4f4;
+        color: #f4f4f4;
     }
 
     .burger::before, .burger::after {
@@ -1154,6 +1241,7 @@ footer {
         position: absolute;
         width: 100%;
         height: 2px;
+        transition: all 0.5s;
     }
 
     .burger::before {
@@ -1172,11 +1260,12 @@ footer {
         color: #323232;
         position: absolute;
         top: 11.5px;
+        transition: all 0.5s;
     }
 
     .buy_now {
         margin-left: auto;
-        margin-right: 5%;
+        margin-right: 25px;
     }
 
     .watchword {
@@ -1265,5 +1354,30 @@ footer {
     .subscription {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .burger.active:before {
+        transform: rotate(45deg);
+        top: 11.5px;
+    }
+
+    .burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 11.5px;
+    }
+
+    .active span {
+        transform: scale(0);
+    }
+    body.lock, html.lock {
+        overflow-y: hidden;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .nav_bar {
+        img {
+            height: 40%;
+        }
     }
 }

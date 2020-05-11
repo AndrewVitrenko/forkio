@@ -11,6 +11,7 @@ html, body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 2% 7%;
+  padding-left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,7 +32,8 @@ html, body {
   background-color: #fff; }
   .nav_bar img {
     width: 10%;
-    height: auto; }
+    height: auto;
+    margin-left: 7%; }
   .nav_bar a {
     color: #635c73;
     font-weight: 700;
@@ -50,14 +52,14 @@ html, body {
     -ms-flex-direction: row;
     flex-direction: row; }
 
+.border, .nav_networks, .burger {
+  display: none; }
+
 .buy_now {
   color: #fff !important;
   padding: 9px 30px;
   background-color: #8d81ac;
   border-radius: 20px; }
-
-.burger {
-  display: none; }
 
 .nav {
   display: inline;
@@ -145,11 +147,10 @@ main {
   .github_rating table {
     display: inline-block;
     border-collapse: collapse;
-    margin-right: 1%; }
-    .github_rating table tr {
-      border-radius: 5px; }
+    margin-right: 1%;
+    border-radius: 5px;
+    border: 1px solid #d5d5d5; }
     .github_rating table td {
-      border: 1px solid #d5d5d5;
       padding: 6px 3px;
       text-align: center;
       min-width: 100px; }
@@ -157,7 +158,8 @@ main {
       background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), color-stop(7.69%, #fbfbfb), color-stop(15.38%, #fafafa), color-stop(23.08%, #f9f9f9), color-stop(30.77%, #f8f8f8), color-stop(38.46%, #f7f7f7), color-stop(46.15%, #f6f6f6), color-stop(53.85%, whitesmoke), color-stop(61.54%, #f4f4f4), color-stop(69.23%, #f3f3f3), color-stop(76.92%, #f2f2f2), color-stop(84.62%, #f1f1f1), color-stop(92.31%, #f0f0ef), to(#eeeeef));
       background: -webkit-linear-gradient(top, #fcfcfc 0%, #fbfbfb 7.69%, #fafafa 15.38%, #f9f9f9 23.08%, #f8f8f8 30.77%, #f7f7f7 38.46%, #f6f6f6 46.15%, whitesmoke 53.85%, #f4f4f4 61.54%, #f3f3f3 69.23%, #f2f2f2 76.92%, #f1f1f1 84.62%, #f0f0ef 92.31%, #eeeeef 100%);
       background: -o-linear-gradient(top, #fcfcfc 0%, #fbfbfb 7.69%, #fafafa 15.38%, #f9f9f9 23.08%, #f8f8f8 30.77%, #f7f7f7 38.46%, #f6f6f6 46.15%, whitesmoke 53.85%, #f4f4f4 61.54%, #f3f3f3 69.23%, #f2f2f2 76.92%, #f1f1f1 84.62%, #f0f0ef 92.31%, #eeeeef 100%);
-      background: linear-gradient(180deg, #fcfcfc 0%, #fbfbfb 7.69%, #fafafa 15.38%, #f9f9f9 23.08%, #f8f8f8 30.77%, #f7f7f7 38.46%, #f6f6f6 46.15%, whitesmoke 53.85%, #f4f4f4 61.54%, #f3f3f3 69.23%, #f2f2f2 76.92%, #f1f1f1 84.62%, #f0f0ef 92.31%, #eeeeef 100%); }
+      background: linear-gradient(180deg, #fcfcfc 0%, #fbfbfb 7.69%, #fafafa 15.38%, #f9f9f9 23.08%, #f8f8f8 30.77%, #f7f7f7 38.46%, #f6f6f6 46.15%, whitesmoke 53.85%, #f4f4f4 61.54%, #f3f3f3 69.23%, #f2f2f2 76.92%, #f1f1f1 84.62%, #f0f0ef 92.31%, #eeeeef 100%);
+      border-right: 1px solid #d5d5d5; }
     .github_rating table p {
       margin: 0;
       font-weight: bold;
@@ -543,9 +545,9 @@ hr {
     font-family: 'Montserrat', sans-serif;
     border: none;
     border-radius: 30px;
-    color: #d3d5d9;
     outline: none;
-    min-width: 200px; }
+    min-width: 200px;
+    color: #848e97; }
   .subscription ::-webkit-input-placeholder {
     color: #d3d5d9; }
   .subscription ::-moz-placeholder {
@@ -902,18 +904,95 @@ footer {
     left: 7%;
     width: 110%; }
   .nav {
-    display: none; }
+    display: block;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    max-width: 300px;
+    right: 0;
+    background-color: rgba(51, 51, 51, 0.98);
+    padding-bottom: 20px;
+    top: -100%;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
+    .nav ul {
+      display: block;
+      margin: 0; }
+    .nav li {
+      padding: 20px;
+      vertical-align: middle;
+      border-bottom: 1px solid #3E3D3F;
+      margin-left: 0;
+      margin-right: 0;
+      position: relative; }
+    .nav a {
+      color: #fff;
+      font-weight: 600;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s; }
+    .nav li:hover :before {
+      content: '';
+      position: absolute;
+      width: 3px;
+      border-radius: 10px;
+      top: 20px;
+      bottom: 20px;
+      background-color: #8d81ac;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+      left: 0; }
+    .nav li:hover a {
+      color: #8d81ac; }
+  .nav.visible {
+    top: 80px; }
+  .nav_networks {
+    display: block;
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 20px; }
+    .nav_networks span {
+      display: block;
+      text-transform: capitalize;
+      color: #9a9a9a;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      margin-bottom: 20px; }
+    .nav_networks i {
+      color: white;
+      font-size: 20px;
+      margin-right: 20px;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s; }
+    .nav_networks i:hover {
+      color: #8d81ac; }
   .burger {
     display: block;
     width: 30px;
     height: 25px;
-    position: relative; }
+    position: relative;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    margin-left: 25px; }
+  .border {
+    display: block;
+    width: 1px;
+    height: 35px;
+    background-color: #f4f4f4;
+    color: #f4f4f4; }
   .burger::before, .burger::after {
     content: '';
     background-color: #323232;
     position: absolute;
     width: 100%;
-    height: 2px; }
+    height: 2px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
   .burger::before {
     top: 0; }
   .burger::after {
@@ -925,10 +1004,13 @@ footer {
     background-color: #323232;
     color: #323232;
     position: absolute;
-    top: 11.5px; }
+    top: 11.5px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
   .buy_now {
     margin-left: auto;
-    margin-right: 5%; }
+    margin-right: 25px; }
   .watchword {
     font-size: 20px;
     margin-bottom: 5%; }
@@ -970,4 +1052,24 @@ footer {
     margin: 3% auto; }
   .subscription {
     padding-left: 0;
-    padding-right: 0; } }
+    padding-right: 0; }
+  .burger.active:before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 11.5px; }
+  .burger.active:after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    bottom: 11.5px; }
+  .active span {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); }
+  body.lock, html.lock {
+    overflow-y: hidden; } }
+
+@media screen and (max-width: 400px) {
+  .nav_bar img {
+    height: 40%; } }

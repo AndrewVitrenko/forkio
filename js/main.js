@@ -2,11 +2,18 @@ $(document).ready(function() {
     $('.slider').slick();
 
     $('.slick-arrow').text('')
-})
 
-let left = $('.code').css('left')
+    $('.burger').click(function() {
+        $('.burger').toggleClass('active')
+        $('html').toggleClass('lock')
+        $('body').toggleClass('lock')
+        $('.nav').toggleClass('visible')
+    })
+})    
 
-$(window).scroll(function() {
+//let left = $('.code').css('left')
+
+/*$(window).scroll(function() {
 
     const wt = $(window).scrollTop();
     const wh = $(window).height();
@@ -25,4 +32,4 @@ $(window).scroll(function() {
     else if (wt + wh <= et + eh) {
         $('.code').css({left: left})
     }
-})
+})*/
