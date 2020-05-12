@@ -15,15 +15,13 @@ $(document).ready(function() {
 
 /*$(window).scroll(function() {
 
-    const wt = $(window).scrollTop();
-    const wh = $(window).height();
-    const et = $('.code').offset().top;
-    const eh = $('.code').outerHeight();
+    
+    
 
 
     if (wt + wh >= et) {
         if (left == '15%') {
-            $('.code').css({left: '7%'})
+            
         }
         else if (left == '7%') {
             $('.code').css({left: '0'})
@@ -33,3 +31,22 @@ $(document).ready(function() {
         $('.code').css({left: left})
     }
 })*/
+
+$(window).bind('mousewheel', function(event) {
+    const et = $('.code').offset().top;
+    const eh = $('.code').outerHeight();
+    const wt = $(window).scrollTop();
+    const wh = $(window).height();
+    let left = $('.code').css('left')
+
+    if (event.originalEvent.wheelDelta <= 0) {
+        if (wt + wh >= et) {
+            $('.code').css({left: left/2})
+        }
+    }
+    else if (event.originalEvent.wheelDelta >= 0) {
+        if (wt + wh <= et + eh) {
+            $('.code').css({left: left})
+        }
+    }
+})
