@@ -209,23 +209,34 @@ main {
     margin-bottom: 3%;
 }
 
-.usage {
-    padding-left: 6%;
+.usage {    
     background-color: #f4f4f4;
-    display: grid;
-    grid-template-columns: 46/54*1fr 1fr;
+    padding-top: 5%;
+    position: relative;
 
+    h3 {
+        color: $deafult_violet;
+        font-size: 250%;
+        font-family: 'Montserrat', sans-serif;
+        text-align: right;
+        margin-top: 0;
+        margin-bottom: 2%;
+        position: absolute;
+        left: 50%;
+        top: 35px;
+    }
 }
 
-.features_list {
-    padding-top: 5%;
-
-}   
+.grid {
+    display: grid;
+    grid-template-columns: 46/54*1fr 1fr;
+    padding-left: 3%;
+}  
 
 .feature {
     display: grid;
     grid-template-columns: 9/30*1fr 1fr;
-    margin: 10% 0;
+    margin: 5% 0;
 
     img {
         width: 90px;
@@ -254,23 +265,14 @@ main {
 }
 
 .example {
-    padding-left: 7%;
     position: relative;
-
-    h3 {
-        color: $deafult_violet;
-        font-size: 250%;
-        font-family: 'Montserrat', sans-serif;
-        margin-top: 10%;
-    }
-
 }
 
 .code {
     position: absolute;
     width: 110%;
     border-radius: 7px;
-    top: 22%;
+    top: 10%;
     z-index: 10;
     left: 15%;
     box-shadow: 5px 0 5px 5px #d3d3d3;
@@ -883,10 +885,6 @@ footer {
     .variant {
         margin: 2.5% auto;
     }
-
-    .code {
-        width: 125%;
-    }
 }
 
 @media screen and (max-width: 1180px) {
@@ -961,10 +959,6 @@ footer {
 }
 
 @media screen and (max-width: 1030px) {
-    .code {
-        top: 25%;
-    }
-
     .links {
         display: block;
         padding-left: 4%;
@@ -1025,6 +1019,19 @@ footer {
     }
 }
 
+@media screen and (max-width: 980px) {
+    .code {
+        top: 20%;
+        width: 130%;
+    }
+
+    .usage {
+        h3 {
+            right: 20px;
+        }
+    }
+}
+
 @media screen and (max-width: 925px) {
     .bottom_navbar {
         min-width: 250px;
@@ -1039,6 +1046,10 @@ footer {
         div {
             margin: 3% 0;
         }
+    }
+
+    .code {
+        width: 135%;
     }
 }
 
@@ -1128,16 +1139,34 @@ footer {
         padding-right: 5%;
     }
 
-    .usage {
+    .grid {
         display: block;
         padding-left: 3%;
-        padding-bottom: 5%;
     }
 
-    .example .code {
-        position: relative;
-        left: 7%;
-        width: 110%;
+    .usage {
+        padding-top: 10%;
+
+        h3 {
+            position: static;
+            text-align: center;
+            margin: 0 0 10%;
+        }
+    }
+
+    .wrapper {
+        margin-top: 15%;
+    }
+
+    .example {
+        height: 576/701*100vw;
+
+        .code {
+            position: relative;
+            left: 7%;
+            width: 110%;
+            top: 5%;
+        }
     }
 
     .nav {
@@ -1151,7 +1180,7 @@ footer {
         padding-bottom: 20px;
         top: 100%;
         opacity: 0;
-        transition: all 0.5s;
+        transition: all 0.75s;
         
         ul {
             display: block;
@@ -1231,8 +1260,8 @@ footer {
 
     .burger {
         display: block;
-        width: 30px;
-        height: 25px;
+        width: 25px;
+        height: 20px;
         position: relative;
         transition: all 0.5s;
         margin-left: 25px;
@@ -1248,7 +1277,7 @@ footer {
 
     .burger::before, .burger::after {
         content: '';
-        background-color: #323232;
+        background-color: #333333;
         position: absolute;
         width: 100%;
         height: 2px;
@@ -1257,6 +1286,8 @@ footer {
 
     .burger::before {
         top: 0;
+        width: 80%;
+        right: 0;
     }
 
     .burger::after {
@@ -1267,10 +1298,10 @@ footer {
         display: block;
         width: 100%;
         height: 2px;
-        background-color: #323232;
-        color: #323232;
+        background-color: #333333;
+        color: #333333;
         position: absolute;
-        top: 11.5px;
+        top: 9px;
         transition: all 0.5s;
     }
 
@@ -1369,12 +1400,14 @@ footer {
 
     .burger.active:before {
         transform: rotate(45deg);
-        top: 11.5px;
+        top: 9px;
+        width: 100%;
     }
 
     .burger.active:after {
         transform: rotate(-45deg);
-        bottom: 11.5px;
+        bottom: 9px;
+        width: 100%;
     }
 
     .active span {
