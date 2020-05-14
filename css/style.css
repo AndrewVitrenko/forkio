@@ -915,7 +915,8 @@ footer {
     right: 0;
     background-color: rgba(51, 51, 51, 0.98);
     padding-bottom: 20px;
-    top: -100%;
+    top: 100%;
+    opacity: 0;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s; }
@@ -929,6 +930,19 @@ footer {
       margin-left: 0;
       margin-right: 0;
       position: relative; }
+      .nav li :before {
+        content: '';
+        position: absolute;
+        width: 3px;
+        border-radius: 10px;
+        top: 20px;
+        bottom: 20px;
+        background-color: #8d81ac;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        left: 0;
+        opacity: 0; }
     .nav a {
       color: #fff;
       font-weight: 600;
@@ -936,20 +950,11 @@ footer {
       -o-transition: all 0.5s;
       transition: all 0.5s; }
     .nav li:hover :before {
-      content: '';
-      position: absolute;
-      width: 3px;
-      border-radius: 10px;
-      top: 20px;
-      bottom: 20px;
-      background-color: #8d81ac;
-      -webkit-transition: all 0.5s;
-      -o-transition: all 0.5s;
-      transition: all 0.5s;
-      left: 0; }
+      opacity: 1; }
     .nav li:hover a {
       color: #8d81ac; }
   .nav.visible {
+    opacity: 1;
     top: 80px; }
   .nav_networks {
     display: block;
@@ -1072,6 +1077,10 @@ footer {
     transform: scale(0); }
   body.lock, html.lock {
     overflow-y: hidden; } }
+
+@media screen and (max-width: 500px) {
+  .nav {
+    max-width: 100%; } }
 
 @media screen and (max-width: 400px) {
   .nav_bar img {

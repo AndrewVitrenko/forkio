@@ -12,24 +12,31 @@ $(document).ready(function() {
 })    
 
 let lastScrollPosition = 0
-const left = parseFloat($('.code').css('left'))
-console.log (left)
+//const left = parseFloat($('.code').css('left'))
 
 
 $(window).scroll(function() {
+    const position = $('.code').css('position')
     const et = $('.code').offset().top;
     const eh = $('.code').outerHeight();
     const wt = $(window).scrollTop();
     const wh = $(window).height();
 
-    if (wt > lastScrollPosition && wt + wh >= et) {
-        const animatedleft = left/2
-        console.log('down', animatedleft)
-        $('.code').css('left', animatedleft)
+    if (position == 'absolute') {
+        if (wt > lastScrollPosition && wt + wh >= et) {
+            $('.code').css('left', '7%')
+        }
+        else if (wt < lastScrollPosition && wt + wh <= et + eh) {
+            $('.code').css('left', '15%')
+        }
     }
-    else if (wt < lastScrollPosition && wt + wh <= et + eh) {
-        console.log('up', left)
-        $('.code').css('left', left)
+    else if (position == 'relative') {
+        if (wt > lastScrollPosition && wt + wh >= et) {
+            $('.code').css('left', '0')
+        }
+        else if (wt < lastScrollPosition && wt + wh <= et + eh) {
+            $('.code').css('left', '7%')
+        }
     }
 
     lastScrollPosition = wt
