@@ -13,7 +13,9 @@
     display: flex;
 }
 /* Слайд */
-.slick-slide{}
+.slick-slide{
+    outline: none;
+}
 /* Слайд активный (показывается) */
 .slick-slide.slick-active{}
 /* Слайд основной */
