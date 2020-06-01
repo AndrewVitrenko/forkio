@@ -919,8 +919,10 @@ footer {
       width: auto; }
   .downloadnow {
     font-size: 16px; }
-  .downloading_link p {
-    font-size: 12px; }
+  .downloading_link {
+    bottom: -63.5px; }
+    .downloading_link p {
+      font-size: 12px; }
   .features_list {
     padding-right: 5%; }
   .grid {
@@ -1171,3 +1173,8 @@ footer {
     font-size: 200%; }
   .wrapper {
     margin-top: 20%; } }
+
+@media all and (max-width: 324px) {
+  .buy_now {
+    font-size: 12px;
+    padding: 6px 25px; } }

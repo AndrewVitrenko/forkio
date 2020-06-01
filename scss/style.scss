@@ -1158,6 +1158,8 @@ footer {
     }
 
     .downloading_link {
+        bottom: -63.5px;
+
         p {
             font-size: 12px;
         }
@@ -1507,4 +1509,11 @@ footer {
     .wrapper {
         margin-top: 20%;
     }
+}
+
+@media all and (max-width: 324px) {
+    .buy_now {
+        font-size: 12px;
+        padding: 6px 25px;
+    }    
 }
