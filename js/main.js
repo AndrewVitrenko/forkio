@@ -24,7 +24,7 @@ $(window).scroll(function() {
 
     if (position == 'absolute') {
         if (wt > lastScrollPosition && wt + wh >= et) {
-            $('.code').css('left', '7%')
+            $('.code').css('left', '3%')
         }
         else if (wt < lastScrollPosition && wt + wh <= et + eh) {
             $('.code').css('left', '15%')
@@ -32,7 +32,7 @@ $(window).scroll(function() {
     }
     else if (position == 'relative') {
         if (wt > lastScrollPosition && wt + wh >= et) {
-            $('.code').css('left', '0')
+            $('.code').css('left', '3%')
         }
         else if (wt < lastScrollPosition && wt + wh <= et + eh) {
             $('.code').css('left', '7%')

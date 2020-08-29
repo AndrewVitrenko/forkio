@@ -4,17 +4,20 @@
 /* Слайдер с точками */
 /* Ограничивающая оболочка */
 .slick-list {
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 /* Лента слайдов */
 .slick-track {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+}
 
 /* Слайд */
 .slick-slide {
-  outline: none; }
+  outline: none;
+}
 
 /* Слайд активный (показывается) */
 /* Слайд основной */
@@ -33,25 +36,27 @@
   padding: 5px;
   background: none;
   outline: none;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 /* Стрелка влево */
 .slick-arrow.slick-prev {
   left: 0;
   -webkit-transform: rotate(135deg);
-  -ms-transform: rotate(135deg);
-  transform: rotate(135deg); }
+          transform: rotate(135deg);
+}
 
 /* Стрелка вправо */
 .slick-arrow.slick-next {
   right: 0;
   -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg); }
+          transform: rotate(-45deg);
+}
 
 /* Стрелка не активная */
 /* Точки (булиты) */
 /* Активная точка */
 /* Элемент точки */
 .slider {
-  position: relative; }
+  position: relative;
+}
